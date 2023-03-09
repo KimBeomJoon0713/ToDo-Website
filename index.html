@@ -6,57 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="icon" href="./ToDo-Icon/ToDo-Icon.png" />
     <link rel="stylesheet" href="style.css" />
     <title>To_Do_List</title>
   </head>
   <body>
+    <!-- 노래-->
+    <audio src="./Music/Ampyx - Rise.mp3"></audio>
+    <button id="Play_Button">
+      <i class="fa fa-play fa-2x"></i>
+    </button>
+
     <main class="container">
-      <!-- 시계 -->
-      <h1 id="clock_frame">00:00:00</h1>
-      <h3 id="week_frame"></h3>
+      <div>
+        <!-- 시계 -->
+        <h1 id="clock_frame">00:00:00</h1>
+        <h3 id="week_frame"></h3>
+      </div>
 
-      <!-- 노래-->
-      <audio src="./Music/Ampyx - Rise.mp3"></audio>
-      <button id="Play_Button">
-        <i class="fa fa-play"></i>
-      </button>
+      <div>
+        <!-- 로그인 -->
+        <form id="login-from">
+          <input id="login-id" type="text" placeholder="user's name" required />
+        </form>
 
-      <!-- 로그인 -->
-      <form id="login-from">
-        <input id="login-id" type="text" placeholder="user's name" required />
-        <input type="submit" value="login" />
-      </form>
+        <!-- 환영인사 -->
+        <h1 id="greeting"></h1>
+      </div>
+      <div>
+        <!-- 할 일 -->
+        <form id="to_do_from" class="hidden">
+          <input
+            type="text"
+            id="to_do_input"
+            placeholder="write down what you need to do"
+            required
+          />
+        </form>
+      </div>
 
-      <!-- 할 일 -->
-      <form id="to_do_from" class="hidden">
-        <input
-          type="text"
-          id="to_do_input"
-          placeholder="write down what you need to do"
-          required
-        />
-        <input type="submit" value="추가" />
-      </form>
+      <div class="ToDoList_Scroll">
+        <ul id="to_do_list"></ul>
+      </div>
 
-      <ul id="to_do_list"></ul>
-
-      <!-- 환영인사 -->
-      <h1 id="greeting"></h1>
-
-      <!-- 명언 -->
-      <h2 id="content"></h2>
-      <h4 id="autor"></h4>
+      <div class="quote">
+        <!-- 명언 -->
+        <h2 id="content"></h2>
+        <h4 id="author"></h4>
+      </div>
     </main>
-    <script src="greeting.js"></script>
-    <script src="clock.js"></script>
-    <script src="wise_saying.js"></script>
-    <script src="to_do.js"></script>
-    <script src="music.js"></script>
+    <script src="JavaScript/greeting.js"></script>
+    <script src="JavaScript/clock.js"></script>
+    <script src="JavaScript/wise_saying.js"></script>
+    <script src="JavaScript/to_do.js"></script>
+    <script src="JavaScript/music.js"></script>
   </body>
 </html>

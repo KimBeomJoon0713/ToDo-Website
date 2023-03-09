@@ -1,3 +1,144 @@
+@font-face {
+  font-family: "SF PRO";
+  src: url("./SF_PRO/SF-Pro.ttf");
+}
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hidden {
   display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+span,
+input {
+  font-family: "SF Pro";
+  font-weight: 300;
+  color: white;
+}
+
+body {
+  background-image: url("BackGround/BackGround.jpg");
+  background-size: cover;
+
+  animation: slidein 0.5s;
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* INPUT */
+input {
+  /* 크기 */
+  width: 600px;
+  height: 70px;
+
+  /* 텍스트 */
+  text-align: center;
+
+  /* 바탕 색깔 */
+  background-color: transparent;
+
+  /* border */
+  border-color: aliceblue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  /* 폰트 */
+  font-size: 32px;
+}
+input::placeholder {
+  color: lightgray;
+}
+
+li {
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+#Play_Button {
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  background-color: transparent;
+  border: none;
+}
+#clock_frame {
+  font-size: 108px;
+  font-weight: 500;
+
+  margin: 0;
+  margin-top: 10%;
+  text-align: center;
+}
+#week_frame {
+  font-size: 24px;
+
+  margin: 0;
+  text-align: center;
+}
+#greeting {
+  font-size: 64px;
+  font-weight: 400;
+
+  margin: 0;
+  margin-top: 2%;
+  text-align: center;
+
+  animation: slidein 0.5s;
+}
+#content {
+  font-size: 24px;
+
+  margin: 0;
+}
+#author {
+  font-size: 20px;
+  margin: 0;
+  margin-top: 2%;
+}
+
+.ToDoList_Scroll {
+  width: 550px;
+  height: 300px;
+  overflow-y: scroll;
+
+  margin: auto;
+
+  animation: slidein 0.5s;
+}
+.ToDoList_Scroll::-webkit-scrollbar {
+  display: none;
+}
+.quote {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  bottom: 3%;
+  text-align: center;
+
+  animation: slidein 0.5s;
 }
